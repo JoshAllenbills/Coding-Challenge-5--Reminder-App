@@ -6,7 +6,10 @@ body {
   height: 100vh;
 }
 
-
+.reminder-input{
+  background-color:darkcyan;
+  color: gold;
+}
 .container {
   width: 400px;
   background-color: red;
@@ -19,11 +22,12 @@ body {
 .title-bar {
   text-align: center;
   margin-bottom: 20px;
+  
 }
 
 .title-bar h1 {
   font-size: 2em;
-  color: #333;
+  color:deepskyblue
 }
 
 .reminder-box {
@@ -35,6 +39,7 @@ body {
   font-size: 1.2em;
   min-height: 100px;
   margin-bottom: 20px;
+  color: #f2c700;
 }
 
 .navigation {
@@ -64,7 +69,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black;
+  color:blueviolet;
  
 
 }
