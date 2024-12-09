@@ -1,99 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reminder Website</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RemindME</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#add-reminder">Add Reminder</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#completed">Completed</a></li>
-        <li><a href="#profile">Profile</a></li>
-      </ul>
-    </nav>
+<div class="container">
+  <header class="title-bar">
+    <h1>RemindME</h1>
   </header>
 
-  <section id="dashboard">
-    <h1>Reminder Dashboard</h1>
-    <div>
-      <div>
-        <h2>Upcoming Reminders</h2>
-        <ul>
-          <li>Meeting with Josh Allen - Dec 10, 2024</li>
-          <li>Doctor's Appointment - Dec 15, 2024</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Quick Stats</h2>
-        <p>Total Reminders: 12</p>
-        <p>Completed: 5</p>
-        <p>Pending: 7</p>
-      </div>
-    </div>
-  </section>
+  <div class="reminder-box">
+    <p id="current-reminder">No reminders yet.</p>
+  </div>
 
- 
-  <section id="add-reminder">
-    <h1>Add a New Reminder</h1>
-    <form action="/add-reminder" method="POST">
-      <label for="reminder-title">Title:</label>
-      <input type="text" id="reminder-title" name="title" placeholder="Reminder title" required>
+  <div class="navigation">
+    <button id="prev-btn" class="nav-btn"><<</button>
+    <span id="reminder-counter">0 / 0</span>
+    <button id="next-btn" class="nav-btn">>></button>
+  </div>
 
-      <label for="reminder-description">Description:</label>
-      <textarea id="reminder-description" name="description" placeholder="Details about the reminder"></textarea>
+  <div class="add-reminder">
+    <input type="text"  class="reminder-input" id="reminder-input" placeholder="Enter your reminder...">
+    <button class="add-btn" id="add-btn">Add Reminder</button>
+  </div>
+</div>
 
-      <label for="reminder-date">Date:</label>
-      <input type="date" id="reminder-date" name="date" required>
-
-      <label for="reminder-category">Category:</label>
-      <select id="reminder-category" name="category">
-        <option value="work">Work</option>
-        <option value="personal">Personal</option>
-        <option value="health">Health</option>
-        <option value="others">Others</option>
-      </select>
-
-      <button type="submit">Add Reminder</button>
-    </form>
-  </section>
-
-
-  <section id="categories">
-    <h1>Categories</h1>
-    <ul>
-      <li>Work</li>
-      <li>Personal</li>
-      <li>Health</li>
-      <li>Others</li>
-    </ul>
-  </section>
-
- 
-  <section id="completed">
-    <h1>Completed Reminders</h1>
-    <ul>
-      <li>Buy groceries - Completed on Dec 5, 2024</li>
-      <li>Submit project report - Completed on Dec 3, 2024</li>
-    </ul>
-  </section>
-
-  <section id="profile">
-    <h1>Your Profile</h1>
-    <p>Name: Colin Djurkinjak</p>
-    <p>Email: colin.djurkinjak@example.com</p>
-    <p>Joined: Jan 15, 2024</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Reminder Website. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
